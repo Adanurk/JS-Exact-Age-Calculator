@@ -67,9 +67,9 @@ birthdayInput.addEventListener("change", (event)=>{
 
     loading.style.display = "block";
     setInterval(updateCountdown, 1000);
-    // setTimeout(()=> {
-    //     loading.style.display = "none";
-    // })
+   setTimeout(()=> {
+       loading.style.display = "none";
+   })
 });
 
 const updateCountdown = () => {
@@ -96,7 +96,15 @@ const updateCountdown = () => {
     let minuteOfAge = currentMinutes - dobMinutes;
     let secondOfAge = currentSeconds - dobSeconds;
 
-    
+    if (monthOfAge < 0) {
+        monthOfAge += 12;
+        yearOfAge --;
+    }
+
+    if (dayOfAge < 0) {
+        dayOfAge += 30;
+        monthOfAge --;
+    }
 
     //Add values to DOM
 
