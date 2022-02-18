@@ -20,6 +20,20 @@ window.addEventListener("load", () => {
     //miliseconds in set Timeout
     setTimeout(()=>{
         loading.style.display = "none";
-    }, 2000)
+        countdown.style.display = "flex";
+    }, 2000);
+years.innerHTML = "00";
+months.innerHTML = "00";
+days.innerHTML = "00";
+hours.innerHTML = "00";
+minutes.innerHTML = "00";
+seconds.innerHTML = "00";
+
 });
+
+// time to prepare countdown div
+
+
+
+
 
